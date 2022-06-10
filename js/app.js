@@ -3981,7 +3981,7 @@
                     draggable: true
                 },
                 slideToClickedSlide: true,
-                slidesOffsetAfter: document.querySelector(".excursions-block-slider__slide").offsetWidth,
+                slidesOffsetAfter: document.querySelector(".excursions-block-slider__slide").offsetWidth / 3,
                 slidesOffsetBefore: parseInt(getComputedStyle(document.querySelector(".excursions-block__container")).marginLeft) + 15
             });
         }
