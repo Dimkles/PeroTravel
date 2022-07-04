@@ -3734,10 +3734,48 @@
                 slidesOffsetBefore: parseInt(getComputedStyle(document.querySelector(".excursions-block__container")).marginLeft) + 15
             });
         }
+        if (document.querySelector(".reviews__slider")) {
+            new core(".reviews__slider", {
+                modules: [ Navigation, Scrollbar ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                speed: 800,
+                navigation: {
+                    nextEl: ".reviews__button-next",
+                    prevEl: ".reviews__button-prev"
+                },
+                scrollbar: {
+                    el: ".reviews__scrollbar",
+                    draggable: true
+                },
+                slideToClickedSlide: true,
+                slidesOffsetAfter: document.querySelector(".reviews__slide").offsetWidth / 3,
+                slidesOffsetBefore: parseInt(getComputedStyle(document.querySelector(".reviews__container")).marginLeft) + 15
+            });
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();
     }));
+    function setDynamicMarginLeft(element, container, containerPading = 0) {
+        if (document.querySelector(`${element}`) && document.querySelector(`${container}`)) {
+            element = document.querySelector(`${element}`);
+            let containerMargin = parseInt(getComputedStyle(document.querySelector(`${container}`)).marginLeft);
+            element.style.marginLeft = `${containerMargin + containerPading}px`;
+        }
+    }
+    function setDynamicWidthSliderNavigation(sliderNavigation) {
+        if (document.querySelector(`${sliderNavigation}`)) {
+            sliderNavigation = document.querySelector(`${sliderNavigation}`);
+            sliderNavigation.style.width = `${document.documentElement.clientWidth - parseInt(getComputedStyle(sliderNavigation).marginLeft) - 120}px`;
+        }
+    }
+    setDynamicMarginLeft(".excursions-block-slider__navigation", ".excursions-block__container", 15);
+    setDynamicWidthSliderNavigation(".excursions-block-slider__navigation");
+    setDynamicMarginLeft(".reviews__navigation", ".reviews__container", 15);
+    setDynamicWidthSliderNavigation(".reviews__navigation");
     let addWindowScrollEvent = false;
     setTimeout((() => {
         if (addWindowScrollEvent) {
@@ -3747,9 +3785,6 @@
             }));
         }
     }), 0);
-    let excursionsBlockSliderNavigation = document.querySelector(".excursions-block-slider__navigation");
-    excursionsBlockSliderNavigation.style.marginLeft = `${parseInt(getComputedStyle(document.querySelector(".excursions-block__container")).marginLeft) + 15}px`;
-    excursionsBlockSliderNavigation.style.width = `${document.documentElement.clientWidth - parseInt(getComputedStyle(excursionsBlockSliderNavigation).marginLeft) - 120}px`;
     window["FLS"] = true;
     isWebp();
     menuInit();
