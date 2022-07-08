@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap&_v=20220704181747" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap&_v=20220704181747" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.min.css?_v=20220704181747">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap&_v=20220708014253" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap&_v=20220708014253" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220708014253">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -494,6 +494,18 @@
 					</div>
 				</div>
 			</section>
+			<section class="connection">
+				<div class="connection__container">
+					<form data-ajax id="form" action="send.php" method="post" class="connection__form form">
+						<span class="form__title">Остались вопросы?</span>
+						<span class="form__subtitle">Оставь заявку и мы ответим</span>
+						<input data-required data-validate name="name" type="text" class="form__name" placeholder="Имя">
+						<input data-required data-validate name="tel" data-input-tel type="tel" class="form__tel" placeholder="Телефон" maxlength="18">
+						<input data-required="email" data-validate name="email" type="email" class="form__email" placeholder="Почта">
+						<button type="submit" class="form__button button">Оставить заявку</button>
+					</form>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -510,7 +522,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220704181747"></script>
+	<script src="js/app.min.js?_v=20220708014253"></script>
 
 
 </body>

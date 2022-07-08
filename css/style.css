@@ -1312,6 +1312,161 @@ body::after {
   z-index: 10;
 }
 
+.no-webp .connection{
+  background-image: url("../img/connection/connection_bg.jpg"); }
+
+.connection {
+  background-size: cover;
+  background-position-y: bottom;
+}
+
+.connection__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 132px 95px 143px 105px;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+@supports (padding-top: clamp( 7.625rem , 7.3924418605rem  +  1.1627906977vw , 8.25rem )) {
+  .form {
+    padding-top: clamp( 7.625rem , 7.3924418605rem  +  1.1627906977vw , 8.25rem );
+  }
+}
+
+@supports not (padding-top: clamp( 7.625rem , 7.3924418605rem  +  1.1627906977vw , 8.25rem )) {
+  .form {
+    padding-top: calc(7.625rem + 0.625 * (100vw - 20rem) / 53.75);
+  }
+}
+
+@supports (padding-right: clamp( 1.375rem , -0.3226744186rem  +  8.488372093vw , 5.9375rem )) {
+  .form {
+    padding-right: clamp( 1.375rem , -0.3226744186rem  +  8.488372093vw , 5.9375rem );
+  }
+}
+
+@supports not (padding-right: clamp( 1.375rem , -0.3226744186rem  +  8.488372093vw , 5.9375rem )) {
+  .form {
+    padding-right: calc(1.375rem + 4.5625 * (100vw - 20rem) / 53.75);
+  }
+}
+
+@supports (padding-bottom: clamp( 8rem , 7.6511627907rem  +  1.7441860465vw , 8.9375rem )) {
+  .form {
+    padding-bottom: clamp( 8rem , 7.6511627907rem  +  1.7441860465vw , 8.9375rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 8rem , 7.6511627907rem  +  1.7441860465vw , 8.9375rem )) {
+  .form {
+    padding-bottom: calc(8rem + 0.9375 * (100vw - 20rem) / 53.75);
+  }
+}
+
+@supports (padding-left: clamp( 1.4375rem , -0.4694767442rem  +  9.5348837209vw , 6.5625rem )) {
+  .form {
+    padding-left: clamp( 1.4375rem , -0.4694767442rem  +  9.5348837209vw , 6.5625rem );
+  }
+}
+
+@supports not (padding-left: clamp( 1.4375rem , -0.4694767442rem  +  9.5348837209vw , 6.5625rem )) {
+  .form {
+    padding-left: calc(1.4375rem + 5.125 * (100vw - 20rem) / 53.75);
+  }
+}
+
+.form__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.form__subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFC700;
+  display: inline-block;
+  margin-bottom: 45px;
+}
+
+.form input {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #fff;
+  height: 15px;
+  outline: none;
+}
+
+@supports (width: clamp( 14.0625rem , 10.9229651163rem  +  15.6976744186vw , 22.5rem )) {
+  .form input {
+    width: clamp( 14.0625rem , 10.9229651163rem  +  15.6976744186vw , 22.5rem );
+  }
+}
+
+@supports not (width: clamp( 14.0625rem , 10.9229651163rem  +  15.6976744186vw , 22.5rem )) {
+  .form input {
+    width: calc(14.0625rem + 8.4375 * (100vw - 20rem) / 53.75);
+  }
+}
+
+.form input:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.form input:last-child {
+  margin-bottom: 83px;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form input::-moz-placeholder {
+  color: #fff;
+}
+
+.form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form input::placeholder {
+  color: #fff;
+}
+
+.form__button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -1551,6 +1706,12 @@ body::after {
   .gallery-content__right .gallery-content__image:nth-child(1) {
     display: none;
   }
+
+  .form__button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .webp .started__wrapper-bg{ background-image: url(../img/started/started-bg.webp); }
@@ -1562,3 +1723,5 @@ body::after {
 .webp .excursions-block-tour-card-3{ background-image: url(../img/excursions-block/excursions-block__bg-3.webp); }
 
 .webp .excursions-block-tour-card-4{ background-image: url(../img/excursions-block/excursions-block__bg-4.webp); }
+
+.webp .connection{ background-image: url(../img/connection/connection_bg.webp); }
